@@ -34,7 +34,8 @@ class Menu {
   }
   
   public function getTaxIncludedPrice() {
-    return floor($this->price * 1.08);
+    //return floor($this->price * 1.08);
+     return floor($this->price);
   }
   
   public function getTotalPrice() {

@@ -13,7 +13,7 @@ require_once('menu.php');
 </head>
 <body>
   <div class="menu-wrapper container">
-    <h1 class="logo">Café Progate</h1>
+    <h1 class="logo">本日のお弁当</h1>
     <h3>メニュー<?php echo Menu::getCount() ?>品</h3>
     <form method="post" action="confirm.php">
       <div class="menu-items">
@@ -32,7 +32,7 @@ require_once('menu.php');
                 <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/chilli.png" class='icon-spiciness'>
               <?php endfor ?>
             <?php endif ?>
-            <p class="price">¥<?php echo $menu->getTaxIncludedPrice() ?>（税込）</p>
+            <p class="price">¥<?php echo $menu->getTaxIncludedPrice() ?></p>
             <input type="text" value="0" name="<?php echo $menu->getName() ?>">
             <span>個</span>
           </div>

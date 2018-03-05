@@ -4,10 +4,10 @@ require_once('food.php');
 require_once('review.php');
 require_once('user.php');
 
-$juice = new Drink('JUICE', 600, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/juice.png', 'アイス');
-$coffee = new Drink('COFFEE', 500, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png', 'ホット');
-$curry = new Food('CURRY', 900, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/curry.png', 3);
-$pasta = new Food('PASTA', 1200, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/pasta.png', 1);
+$juice = new Drink('豚生姜焼きと鶏唐揚げ弁当', 550, 'images/TKCO016.jpg', 'アイス');
+$coffee = new Drink('越後の銘酒「八海山」の搾り粕を使った赤魚の粕焼', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-tsukutomi.com/w640h427/TKDE001.jpg', 'ホット');
+$curry = new Food('大人のお子様LUNCH（ドライカレー＆チキントマト煮）', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-sazanami.com/w640h427/TKTL005.jpg', 3);
+$pasta = new Food('仙台黒毛和牛牛めし VS 岩手県産岩中豚の塩カルビ重', 700, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-sanrikugochisoutamatebako.com/w640h427/TKVB016.jpg', 1);
 
 $menus = array($juice, $coffee, $curry, $pasta);
 
