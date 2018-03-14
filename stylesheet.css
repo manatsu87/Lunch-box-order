@@ -178,6 +178,13 @@ input[type="submit"] {
   text-align: right;
 }
 
+.return-index  {
+  font-size: 16px;
+  border: 1px solid #aaa;
+  width: 400px;
+  text-align: center;
+}
+
 /* レビュー一覧 */
 .review-wrapper {
   text-align: center;

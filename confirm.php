@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Progate</title>
+  <title>PF　今日の弁当</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
 </head>
@@ -29,5 +29,8 @@
     <?php endforeach ?>
     <h3>合計金額: <?php echo $totalPayment ?>円</h3>
   </div>
+  <div class="return-index">
+   <a href="index.php">← メニュー一覧へ</a>
+  <div/>
 </body>
 </html>

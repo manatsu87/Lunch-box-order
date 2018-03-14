@@ -4,8 +4,8 @@ require_once('menu.php');
 class Drink extends Menu {
   private $type;
   
-  public function __construct($name, $price, $image, $type) {
-    parent::__construct($name, $price, $image);
+  public function __construct($name, $price, $image,$storeName,$type) {
+    parent::__construct($name, $price, $image,$storeName);
     $this->type = $type;
   }
   

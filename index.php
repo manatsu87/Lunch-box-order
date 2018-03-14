@@ -39,7 +39,7 @@ require_once('menu.php');
           </div>
         <?php endforeach ?>
       </div>
-      <input type="submit" value="注文する">
+      <input type="submit" value="注文内容を確認">
     </form>
   </div>
 </body>

@@ -4,7 +4,7 @@ require_once('menu.php');
 class Food extends Menu {
   private $spiciness;
   
-  public function __construct($name, $price, $image, $spiciness,$storeName) {
+  public function __construct($name, $price, $image, $storeName,$spiciness) {
     parent::__construct($name, $price, $image,$storeName);
     $this->spiciness = $spiciness;
   }

@@ -10,16 +10,20 @@ $menu3 = new Food('麻婆茄子（マーボーナス）二段弁当', 550, 'http
 $menu4 = new Food('【洋食】柔らかローストチキン弁当', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-mana.com/w640h427/TKSY032.jpg',1,'手作り弁当 マナ蔵');
 $menu5 = new Food('【中華】野菜たっぷりチンジャオロース弁当',600,'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-mana.com/w640h427/TKSY035.jpg',1,'手作り弁当 マナ');
 $menu6 = new Food('たいめいけん洋食や　ポークジンジャー重',800,'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-taimeiken-t.com/w640h427/TOPJ001.jpg',1,'東京 日本橋 三代目 たいめいけん');
+$menu7 = new Drink('烏龍茶',130,'https://www.suntory.co.jp/news/article/mt_items/l_sbf0512-1.jpg','アイス','');
+$menu8 = new Drink('コーヒー',0,'http://www.family.co.jp/content/dam/family/goods/0211123.jpg','ホット','ファミリーマート');
 
-$menus = array($menu1, $menu2, $menu3, $menu4,$menu5,$menu6);
+
+$menus = array($menu1, $menu2, $menu3, $menu4,$menu5,$menu6,$menu7,$menu8);
 
 $user1 = new User('suzuki', 'male');
 $user2 = new User('tanaka', 'female');
 $user3 = new User('suzuki', 'female');
 $user4 = new User('sato', 'male');
 $user5 = new User('yamamoto','male');
+$user6 = new User('kawarasaki','male');
 
-$users = array($user1, $user2, $user3, $user4,$user5);
+$users = array($user1, $user2, $user3, $user4,$user5,$user6);
 
 // レビュー
 $review1 = new Review($menu1->getName(), $user1->getId(), 'ボリュームたっぷり');
@@ -32,6 +36,8 @@ $review7 = new Review($menu3->getName(), $user4->getId(), '酸味が強め');
 $review8 = new Review($menu4->getName(), $user4->getId(), '具材にこだわりを感じました。');
 $review9 = new Review($menu5->getName(), $user5->getId(), '本場の味を感じました');
 $review10 =new Review($menu6->getName(), $user5->getId(), 'ワンダフル！！');
+$review11 =new Review($menu7->getName(), $user6->getId(), '普通のお茶');
+$review12 =new Review($menu8->getName(), $user6->getId(), 'ファミマのコーヒー！');
 
 $reviews = array($review1, $review2, $review3, $review4, $review5, $review6, $review7, $review8,$review9,$review10);
 
