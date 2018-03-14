@@ -4,30 +4,35 @@ require_once('food.php');
 require_once('review.php');
 require_once('user.php');
 
-$juice = new Drink('豚生姜焼きと鶏唐揚げ弁当', 550, 'images/TKCO016.jpg', 'アイス');
-$coffee = new Drink('越後の銘酒「八海山」の搾り粕を使った赤魚の粕焼', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-tsukutomi.com/w640h427/TKDE001.jpg', 'ホット');
-$curry = new Food('大人のお子様LUNCH（ドライカレー＆チキントマト煮）', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-sazanami.com/w640h427/TKTL005.jpg', 3);
-$pasta = new Food('仙台黒毛和牛牛めし VS 岩手県産岩中豚の塩カルビ重', 700, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-sanrikugochisoutamatebako.com/w640h427/TKVB016.jpg', 1);
+$menu1 = new Food('ガパオBOX', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-lunch-factory.com/w640h427/TKCK004.jpg',2,'ランチファクトリー');
+$menu2 = new Food('メダイの西京焼き弁当', 550, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-kamokura.com/w640h427/TKFF016.jpg',1,'賀茂蔵');
+$menu3 = new Food('麻婆茄子（マーボーナス）二段弁当', 550, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-kamokura.com/w640h427/TKFF021.jpg',3,'賀茂蔵');
+$menu4 = new Food('【洋食】柔らかローストチキン弁当', 600, 'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-mana.com/w640h427/TKSY032.jpg',1,'手作り弁当 マナ蔵');
+$menu5 = new Food('【中華】野菜たっぷりチンジャオロース弁当',600,'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-mana.com/w640h427/TKSY035.jpg',1,'手作り弁当 マナ');
+$menu6 = new Food('たいめいけん洋食や　ポークジンジャー重',800,'https://public-stafes.s3.amazonaws.com/common/stores/shashoku-taimeiken-t.com/w640h427/TOPJ001.jpg',1,'東京 日本橋 三代目 たいめいけん');
 
-$menus = array($juice, $coffee, $curry, $pasta);
+$menus = array($menu1, $menu2, $menu3, $menu4,$menu5,$menu6);
 
 $user1 = new User('suzuki', 'male');
 $user2 = new User('tanaka', 'female');
 $user3 = new User('suzuki', 'female');
 $user4 = new User('sato', 'male');
+$user5 = new User('yamamoto','male');
 
-$users = array($user1, $user2, $user3, $user4);
+$users = array($user1, $user2, $user3, $user4,$user5);
 
-// 以下の$review1 ~ $review8を削除して、userIdプロパティをセットするためのコードを貼り付けてください
-$review1 = new Review($juice->getName(), $user1->getId(), '果肉たっぷりのオレンジジュースです！');
-$review2 = new Review($curry->getName(), $user1->getId(), '具がゴロゴロしていてとてもおいしいです');
-$review3 = new Review($coffee->getName(), $user2->getId(), '香りがいいです');
-$review4 = new Review($pasta->getName(), $user2->getId(), 'ソースが絶品です。また食べたい。');
-$review5 = new Review($juice->getName(), $user3->getId(), '普通のジュース');
-$review6 = new Review($curry->getName(), $user3->getId(), '値段の割においしいカレーだと思いました');
-$review7 = new Review($coffee->getName(), $user4->getId(), '苦味がちょうどよくて、おすすめです');
-$review8 = new Review($pasta->getName(), $user4->getId(), '具材にこだわりを感じました。');
+// レビュー
+$review1 = new Review($menu1->getName(), $user1->getId(), 'ボリュームたっぷり');
+$review2 = new Review($menu2->getName(), $user1->getId(), '季節の一品！');
+$review3 = new Review($menu3->getName(), $user2->getId(), '香りがいいです');
+$review4 = new Review($menu4->getName(), $user2->getId(), 'ソースが絶品です。また食べたい。');
+$review5 = new Review($menu1->getName(), $user3->getId(), '弁当オブザイヤー');
+$review6 = new Review($menu2->getName(), $user3->getId(), 'コスパよし');
+$review7 = new Review($menu3->getName(), $user4->getId(), '酸味が強め');
+$review8 = new Review($menu4->getName(), $user4->getId(), '具材にこだわりを感じました。');
+$review9 = new Review($menu5->getName(), $user5->getId(), '本場の味を感じました');
+$review10 =new Review($menu6->getName(), $user5->getId(), 'ワンダフル！！');
 
-$reviews = array($review1, $review2, $review3, $review4, $review5, $review6, $review7, $review8);
+$reviews = array($review1, $review2, $review3, $review4, $review5, $review6, $review7, $review8,$review9,$review10);
 
 ?>

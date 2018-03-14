@@ -33,6 +33,7 @@ require_once('menu.php');
               <?php endfor ?>
             <?php endif ?>
             <p class="price">¥<?php echo $menu->getTaxIncludedPrice() ?></p>
+            <p class="store"><?php echo $menu->getStoreName() ?></p>
             <input type="text" value="0" name="<?php echo $menu->getName() ?>">
             <span>個</span>
           </div>
